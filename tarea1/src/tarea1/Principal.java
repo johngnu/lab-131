@@ -34,6 +34,25 @@ public class Principal {
         A.insertElementAt("H", 2);
         
         // 1
+        A.insertElementAt(B.firstElement(), 3);
+        
+        // 2
+        for (int i = 0; i < B.size(); i++) {
+            A.insertElementAt(B.get(i), 3);
+        }
+        
+        // 3
+        int c = 0;
+        for (int i = 0; i < A.size(); i++) {
+            for (int j = 0; j < B.size(); j++) {
+                if(A.get(i).equals(B.get(j))) {
+                    c++;
+                }
+            }
+        }
+        System.out.println("existen " + c);
+        
+        // 4
         
     }
 
