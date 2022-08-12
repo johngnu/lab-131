@@ -35,6 +35,10 @@ public class Principal {
         //vaciar(C, A);
         //System.out.println(C);
         System.out.println(A);
+        
+        // c
+        iesima(A, 3);
+        
     }
 
     public static void contarCadenas(Stack<String> A) {
@@ -66,6 +70,24 @@ public class Principal {
         }
         vaciar(A, aux);
         vaciar(A, as);        
+    }
+    
+    public static void iesima(Stack<String> A, int i) {
+        Stack<String> aux = new Stack<>();
+        int k = 1;
+        String ci = "";
+        String sig = "";
+        while (!A.empty()) {
+            String s = A.pop();
+            if(i == k) {
+                ci = s;
+                sig = A.pop();
+            }
+            k++;
+            aux.push(s);
+        }
+        vaciar(A, aux);
+        System.out.println("la cadena es: " + sig + ", y la sig: " + ci);
     }
 
 }
