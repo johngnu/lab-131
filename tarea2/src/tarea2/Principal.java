@@ -38,7 +38,7 @@ public class Principal {
         
         // c
         iesima(A, 3);
-        
+        System.out.println(A);
     }
 
     public static void contarCadenas(Stack<String> A) {
@@ -77,17 +77,17 @@ public class Principal {
         int k = 1;
         String ci = "";
         String sig = "";
+        boolean en = false;
         while (!A.empty()) {
             String s = A.pop();
-            if(i == k) {
+            if(k == (i+1)) {
                 ci = s;
-                sig = A.pop();
             }
             k++;
             aux.push(s);
         }
         vaciar(A, aux);
-        System.out.println("la cadena es: " + sig + ", y la sig: " + ci);
+        System.out.println("la cadena es: " + ci + ", y la sig: " + sig);
     }
 
 }
