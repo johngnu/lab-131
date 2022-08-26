@@ -16,6 +16,7 @@ public class Principal {
         A.adicionar(f4);
         A.adicionar(f5);
         A.mostrar();
+        
         CCircularC B = new CCircularC();
         Carrera c1 = new Carrera(1, 23, "Informatica");
         Carrera c2 = new Carrera(2, 25, "Tecnologica");
@@ -24,6 +25,7 @@ public class Principal {
         Carrera c5 = new Carrera(5, 23, "Biologia");
         Carrera c6 = new Carrera(1, 23, "Informatica");
         Carrera c7 = new Carrera(1, 23, "Tecnologia medica");
+        
         B.adicionar(c1);
         B.adicionar(c2);
         B.adicionar(c3);
@@ -32,15 +34,16 @@ public class Principal {
         B.adicionar(c6);
         B.adicionar(c7);
         B.mostrar();
-        System.out.println("******EJ#1*****");
+        
+        System.out.println(" Ejercicio #1*****");
         FacX(A, "Arquitectura");
-        System.out.println("******EJ#2*****");
+        System.out.println(" Ejercicio #2*****");
         Carreras(B, 23);
-        System.out.println("******EJ#3*****");
+        System.out.println(" Ejercicio #3*****");
         Fac_Carreras(A, B);
-        System.out.println("******EJ#4*****");
+        System.out.println(" Ejercicio #4*****");
         Fac_num(A, B);
-        System.out.println("******EJ#5*****");
+        System.out.println(" Ejercicio #5*****");
         MostrarC("Ciencias Puras y Naturales", B, A);
     }
 
