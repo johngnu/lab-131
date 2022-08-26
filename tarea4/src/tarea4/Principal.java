@@ -32,9 +32,12 @@ public class Principal {
         B.adicionar(m1);
         B.mostrar();
         contar(A, B);
-        
+
         // ejer: 2
         ejer2(A, B, 1);
+        
+        // ejer: 4
+        ejer4(A, B);
     }
 
     public static void contar(ColaSL a, ColaCM b) {
@@ -81,8 +84,9 @@ public class Principal {
                         while (!B.esvacia()) {
                             melem = B.eliminar();
                             maux.adicionar(melem);
-                            if(melem.getNro() == x)
+                            if (melem.getNro() == x) {
                                 melem.mostrar();
+                            }
                         }
                         while (!maux.esvacia()) {
                             melem = maux.eliminar();
@@ -90,6 +94,50 @@ public class Principal {
                         }
                     }
                 }
+            }
+            System.out.println();
+            while (!aux.esvacia()) {
+                elem = aux.eliminar();
+                A.adicionar(elem);
+            }
+        }
+    }
+
+    public static void ejer4(ColaSL A, ColaCM B) {
+        Linea elem;
+        if (A.esvacia()) {
+            System.out.println("Cola vacia");
+        } else {
+            System.out.println("\n Lineas de la Cola ");
+
+            ColaSL aux = new ColaSL();
+            while (!A.esvacia()) {
+                elem = A.eliminar();
+                aux.adicionar(elem);
+
+                //elem.mostrar();
+                int c = 0;
+                elem.mostrar();
+                Movil melem;
+                if (B.esvacia()) {
+                    System.out.println("Cola vacia xxx");
+                } else {
+                    System.out.println("\n Moviles de la Cola ");
+                    ColaCM maux = new ColaCM();
+                    while (!B.esvacia()) {
+                        melem = B.eliminar();
+                        maux.adicionar(melem);
+                        //melem.mostrar();
+                        if (melem.getNro() == elem.getNro()) {
+                            c++;
+                        }
+                    }
+                    while (!maux.esvacia()) {
+                        melem = maux.eliminar();
+                        B.adicionar(melem);
+                    }
+                }
+                System.out.println("Esta linea tiene : " + c + " moviles");
             }
             System.out.println();
             while (!aux.esvacia()) {
