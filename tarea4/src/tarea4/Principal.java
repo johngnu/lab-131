@@ -32,6 +32,9 @@ public class Principal {
         B.adicionar(m1);
         B.mostrar();
         contar(A, B);
+        
+        // ejer: 2
+        ejer2(A, B, 1);
     }
 
     public static void contar(ColaSL a, ColaCM b) {
@@ -53,6 +56,47 @@ public class Principal {
 
         }
         a.vaciar(aa);
+    }
+
+    public static void ejer2(ColaSL A, ColaCM B, int x) {
+        Linea elem;
+        if (A.esvacia()) {
+            System.out.println("Cola vacia");
+        } else {
+            System.out.println("\n Lineas de la Cola ");
+
+            ColaSL aux = new ColaSL();
+            while (!A.esvacia()) {
+                elem = A.eliminar();
+                aux.adicionar(elem);
+                //elem.mostrar();
+                if (elem.getNro() == x) {
+                    elem.mostrar();
+                    Movil melem;
+                    if (B.esvacia()) {
+                        System.out.println("Cola vacia xxx");
+                    } else {
+                        System.out.println("\n Moviles de la Cola ");
+                        ColaCM maux = new ColaCM();
+                        while (!B.esvacia()) {
+                            melem = B.eliminar();
+                            maux.adicionar(melem);
+                            if(melem.getNro() == x)
+                                melem.mostrar();
+                        }
+                        while (!maux.esvacia()) {
+                            melem = maux.eliminar();
+                            B.adicionar(melem);
+                        }
+                    }
+                }
+            }
+            System.out.println();
+            while (!aux.esvacia()) {
+                elem = aux.eliminar();
+                A.adicionar(elem);
+            }
+        }
     }
 
 }

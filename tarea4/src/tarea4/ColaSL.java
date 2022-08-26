@@ -76,6 +76,5 @@ public class ColaSL {
         while (!a.esvacia()) {
             adicionar(a.eliminar());
         }
-
     }
 }
