@@ -107,7 +107,8 @@ public class Principal {
 
         a.vaciar(aux);
     }
-    ///MOSTRAR LOS INFORMES  DEL ESTUDIANE CON CI X
+    
+    /// MOSTRAR LOS INFORMES  DEL ESTUDIANE CON CI X
 
     public static void infEsCIx(PilaEstudiante a, PilaInforme b, int c) {
         PilaEstudiante auxe = new PilaEstudiante();
@@ -133,7 +134,6 @@ public class Principal {
                 System.out.println(" no existe estudinate con ci " + c);
             }
         }
-
         a.vaciar(auxe);
     }
 
